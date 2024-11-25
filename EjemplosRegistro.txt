@@ -1,0 +1,25 @@
+# Ejemplos
+
+```
+; Activa los segundos en el reloj
+reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /v 1
+
+```` 
+
+```
+; Muestra las extensiones de los archivos en el explorador de archivos
+; Requiere reiniciar sesión de usuario para comprobar
+
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /v 0
+```
+
+```
+; deshabilitar las sugerencias en la barra de búsquedas
+; Requiere reiniciar sesión de usuario para comprobar
+reg add HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f
+```
+
+
+```
+reg add HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup /v "AllowUpgradesWithUnsupportedTPMOrCPU /t REG_DWORD /d 1 /f
+```
